@@ -210,6 +210,7 @@ def any_float_field(field, **kwargs):
 
 
 @any_field.register(models.FileField)
+@any_field.register(models.ImageField)
 def any_file_field(field, **kwargs):
     """
     Lookup for nearest existing file
@@ -228,7 +229,12 @@ def any_file_field(field, **kwargs):
             if result:
                 return result
             
-    result = get_some_file(field.upload_to)
+    if callable(field.upload_to):
+        generated_filepath = field.upload_to(None, xunit.any_string(ascii_letters, 10, 20))
+        upload_to = os.path.dirname(generated_filepath)
+    else:
+        upload_to = field.upload_to
+    result = get_some_file(upload_to)
 
     if result is None and not field.null:
         raise TypeError("Can't found file in %s for non nullable FileField" % field.upload_to)
