@@ -443,6 +443,10 @@ def _fill_model_fields(model, **kwargs):
             """
             skip primary key field
             """
+        elif isinstance(field, models.fields.related.ForeignKey) and field.model == field.rel.to:
+            """
+            skip self relations
+            """
         else:
             setattr(model, field.name, any_field(field, **fields_args[field.name]))
 
