@@ -3,6 +3,7 @@
 """
 Values generators for common Django Fields
 """
+from django.contrib.contenttypes.models import ContentType
 import re, os, random
 from decimal import Decimal
 from datetime import date, datetime, time
@@ -428,6 +429,12 @@ def any_onetoone_field(field, **kwargs):
 def _fill_model_fields(model, **kwargs):
     model_fields, fields_args = split_model_kwargs(kwargs)
 
+    # fill virtual fields
+    for field in model._meta.virtual_fields:
+        if field.name in model_fields:
+            object = kwargs[field.name]
+            model_fields[field.ct_field] = kwargs[field.ct_field]= ContentType.objects.get_for_model(object)
+            model_fields[field.fk_field] = kwargs[field.fk_field]= object.id
     # fill local fields
     for field in model._meta.fields:
         if field.name in model_fields:
