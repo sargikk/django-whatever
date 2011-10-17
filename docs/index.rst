@@ -9,7 +9,7 @@ implicit fixture files.
 django-any allows you to specify only fields important for tests
 and fills the rest randomly with acceptable values.
 
-It makes tests clean and easy to undestood, without reading fixture files.
+It makes tests clean and easy to understand, without reading fixture files.
 ::
 
     from django_any import any_model
@@ -35,7 +35,6 @@ Contents
    contrib
    debugging
    changelog
-
 
 Authors
 -------
