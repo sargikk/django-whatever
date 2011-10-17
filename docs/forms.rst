@@ -4,7 +4,7 @@ Forms creation
 You can get data for form submissions without secifying form fields
 (it acs very much like :ref:`any_model <models_creation>`).
 
-Given you have a simple contact form::
+Given you have a simple contact form::«
 
     #forms.py
     class ContactForm(forms.Form):

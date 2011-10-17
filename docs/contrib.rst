@@ -7,6 +7,8 @@ django-any provides clean API for creating users and authenticating as users.
 Creating users
 --------------
 
+.. _any_user
+
 ``any_user(password=None, permissions=[], groups=[], **kwargs)``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -38,6 +40,8 @@ Custom test client
 
 Django any has custom test clent, that extends default django client.
 It provides two useful methods for authorisation and posting forms.
+
+.. _login_as
 
 ``login_as(self, **kwargs):``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
