@@ -1,16 +1,18 @@
 Unobtrusive test models creation for django
 ===========================================
 
-django-any the explicit replacement for old-style, big and error-prone
+**NB:** django-whatever is a friendly fork of ``django-any`` package by Mikhail Podgurskiy (kmmbvnr)
+
+django-any is explicit replacement for old-style, big and error-prone
 implicit fixture files.
 
-django-any allows to specify only fields important for test,
-and fill rest by random with acceptable values.
+django-any allows you to specify only fields important for tests
+and fills the rest randomly with acceptable values.
 
 It makes tests clean and easy to undestood, without reading fixture files.
+::
 
-
-    from django_any import any_model, WithTestDataSeed
+    from django_any import any_model
 
     class TestMyShop(TestCase):
         def test_order_updates_user_account(self):
@@ -22,6 +24,4 @@ It makes tests clean and easy to undestood, without reading fixture files.
             self.assertEquals(15, account.amount)
 
 
-The same approach available for forms also (django_any.any_form)
-
-See docs/quickstart.txt for more details
+Read more at the docs: http://django-any.readthedocs.org/
