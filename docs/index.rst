@@ -34,6 +34,7 @@ Contents
    forms
    contrib
    debugging
+   changelog
 
 
 Authors
