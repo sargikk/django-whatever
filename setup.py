@@ -9,6 +9,7 @@ setup(
     url='http://github.com/coagulant/django-whatever',
     packages=['django_any', 'django_any.contrib', 'django_any.tests'],
     include_package_data=True,
+    test_suite = "tests.manage",
     zip_safe=False,
     license='MIT License',
     platforms = ['any'],

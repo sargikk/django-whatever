@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import time, random
-from unittest import _strclass
+
+try:
+    from unittest import _strclass
+except ImportError:
+    _strclass = str
+
 from django import forms
 from django_any import any_form
 from django.test.client import Client as DjangoClient
