@@ -41,7 +41,8 @@ class SimpleCreation(TestCase):
 
         for field, original_field in zip(result._meta.fields, SimpleModel._meta.local_fields):
             value = getattr(result, field.name)
-            self.assertTrue(value is not None, "%s is uninitialized" % field.name)
+            if field.name != 'null_boolead_field':
+                self.assertTrue(value is not None, "%s is uninitialized" % field.name)
             self.assertTrue(isinstance(field, original_field.__class__), "%s has correct field type" % field.name)
 
     def _test_partial_specification(self):

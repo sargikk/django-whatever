@@ -12,6 +12,6 @@ django-whatever fork changelog
 
 
 django-any changelog
-====================
+~~~~~~~~~~~~~~~~~~~~
 
 Not maintained
