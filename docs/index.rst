@@ -42,7 +42,7 @@ Contents
 Development
 -----------
 
-You can grab lates code here: https://github.com/coagulant/django-whatever
+You can grab latest code here: https://github.com/coagulant/django-whatever
 
 Authors
 -------
