@@ -1,7 +1,11 @@
 Installation
 ============
 
-* Install django-any with your python package manager::
+To retain backwards compatibility with `django-any`, `django-whatever` package
+shares the same namespace, so make sure to remove previous djnago_any
+installations if any.
+
+* Install the package with your python package manager::
 
     pip install django-any
 

@@ -1,3 +1,5 @@
+.. _changelog:
+
 django-whatever fork changelog
 ==============================
 

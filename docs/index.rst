@@ -3,6 +3,8 @@ django-whatever (fork of django-any)
 
 **NB:** django-whatever is a friendly fork of ``django-any`` package by Mikhail Podgurskiy (kmmbvnr)
 
+The purpose of the fork is to fix most annoying bugs and add :ref:`some features <changelog>`.
+
 django-any is explicit replacement for old-style, big and error-prone
 implicit fixture files.
 
@@ -35,6 +37,12 @@ Contents
    contrib
    debugging
    changelog
+
+
+Development
+-----------
+
+You can grab lates code here: https://github.com/coagulant/django-whatever
 
 Authors
 -------
