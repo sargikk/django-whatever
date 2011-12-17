@@ -78,7 +78,7 @@ It will create an order for existing customer, whose country is US.
 Custom model fields
 ~~~~~~~~~~~~~~~~~~~
 
-It's quite common to create custom model fields to store data. To let django-any know how to
+It's quite common to create custom model fields to store data. To let ``django-whatever`` know how to
 generate random data for this filed you should register it explicitly::
 
     @any_field.register(model_utils.field.AutoCreatedField)

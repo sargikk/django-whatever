@@ -1,8 +1,8 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='django-whatever',
-    version='0.1.0',
+    version='0.2.0dev',
     description='Unobtrusive test models creation for django.',
     author='Ilya Baryshev',
     author_email='baryshev@gmail.com',

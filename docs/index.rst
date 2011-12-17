@@ -1,9 +1,12 @@
 django-whatever (fork of django-any)
 ====================================
 
-**NB:** django-whatever is a friendly fork of ``django-any`` package by Mikhail Podgurskiy (kmmbvnr)
-
+.. note::  django-whatever is a friendly fork of ``django-any`` package originally by Mikhail Podgurskiy (kmmbvnr)
 The purpose of the fork is to fix most annoying bugs and add :ref:`some features <changelog>`.
+To remain compatible with original package ``django-whatever`` retains same namespace: ``django_any``.
+
+Introduction
+------------
 
 django-any is explicit replacement for old-style, big and error-prone
 implicit fixture files.
@@ -42,16 +45,13 @@ Contents
 Development
 -----------
 
-You can grab latest code here: https://github.com/coagulant/django-whatever
+You can grab latest code on `Github<https://github.com/coagulant/django-whatever>`_
+Feel free to submit `issues<https://github.com/coagulant/django-whatever/issues>`_ there and pull requests are also weclome.
 
-Authors
--------
+Authors & contributors
+----------------------
 
-* kmmbvnr https://github.com/kmmbvnr
-* Vitaa https://github.com/Vitaa
-
-Contributors
-^^^^^^^^^^^^
-
-* Coagulant (fork maintainer) https://github.com/coagulant
+* `kmmbvnr <https://github.com/kmmbvnr>`_
+* `Vitaa  <https://github.com/Vitaa>`_
+* `Coagulant <https://github.com/coagulant>`_ (``django-whatever`` maintainer)
 
