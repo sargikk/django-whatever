@@ -1,17 +1,17 @@
-django-whatever (fork of django-any)
-====================================
+django-whatever
+===============
 
 .. note::  django-whatever is a friendly fork of ``django-any`` package originally by Mikhail Podgurskiy (kmmbvnr)
-The purpose of the fork is to fix most annoying bugs and add :ref:`some features <changelog>`.
-To remain compatible with original package ``django-whatever`` retains same namespace: ``django_any``.
+           The purpose of the fork is to fix most annoying bugs and add :ref:`some features <changelog>`.
+           To remain compatible with original package ``django-whatever`` retains same namespace: ``django_any``.
 
 Introduction
 ------------
 
-django-any is explicit replacement for old-style, big and error-prone
+``django-whatever`` is explicit replacement for old-style, big and error-prone
 implicit fixture files.
 
-django-any allows you to specify only fields important for tests
+``django-whatever`` allows you to specify only fields important for tests
 and fills the rest randomly with acceptable values.
 
 It makes tests clean and easy to understand, without reading fixture files.
@@ -45,13 +45,13 @@ Contents
 Development
 -----------
 
-You can grab latest code on `Github<https://github.com/coagulant/django-whatever>`_
-Feel free to submit `issues<https://github.com/coagulant/django-whatever/issues>`_ there and pull requests are also weclome.
+You can grab latest code on `Github <https://github.com/coagulant/django-whatever>`_
+Feel free to submit `issues <https://github.com/coagulant/django-whatever/issues>`_ there and pull requests are also weclome.
 
 Authors & contributors
 ----------------------
 
-* `kmmbvnr <https://github.com/kmmbvnr>`_
+* `kmmbvnr <https://github.com/kmmbvnr>`_ (``django-any`` author)
 * `Vitaa  <https://github.com/Vitaa>`_
 * `Coagulant <https://github.com/coagulant>`_ (``django-whatever`` maintainer)
 

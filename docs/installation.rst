@@ -1,9 +1,9 @@
 Installation
 ============
 
-.. warning::  To retain backwards compatibility with code written for ``django-any``,
-``django-whatever`` package shares the same namespace, so make sure to remove previous ``django_any``
-installations if you have any.
+.. warning::  To retain backwards compatibility with code written for ``django-any``, ``django-whatever`` package
+              shares the same namespace, so make sure to remove previous ``django_any`` installations if you have any.
+
 
 * Install the package with your python package manager::
 

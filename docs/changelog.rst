@@ -1,7 +1,7 @@
 .. _changelog:
 
-Changelog of django-whatever
-============================
+Changelog
+=========
 
 0.2.0dev
 ~~~~~~~~
