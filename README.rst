@@ -3,6 +3,8 @@ Unobtrusive test models creation for django
 
 `django-whatever` is a friendly fork of ``django-any`` package by Mikhail Podgurskiy (kmmbvnr)
 
+NOTE: The purpose of the fork is to fix most annoying bugs and add `some features <http:http://django-whatever.readthedocs.org/en/latest/changelog.html>`_
+
 django-any is explicit replacement for old-style, big and error-prone
 implicit fixture files.
 
@@ -22,4 +24,4 @@ It makes tests clean and easy to understand, without reading fixture files.::
             account = Account.objects.get(pk=account.pk)
             self.assertEquals(15, account.amount)
 
-Read more at the docs: http://django-any.readthedocs.org/
+Read more at the docs: http://django-whatever.readthedocs.org/
