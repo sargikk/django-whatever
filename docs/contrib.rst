@@ -51,7 +51,7 @@ Example
 ~~~~~~~~
 ::
 
-        from any_model.test import Client
+        from django_any.test import Client
         self.client = Client()
         # log in as admin
         self.client.login_as(is_superuser=True)
