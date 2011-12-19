@@ -7,6 +7,8 @@ Changelog
 ~~~~~~~~
 
 * Fixed ``ImportError: cannot import name _strclass`` for python 2.7
+* Fixed tests for django 1.4 compatibility
+* Added support for GenericIPAddressField in both model and forms (django 1.4 and above)
 * Multiple minor updates and bugfixes in docs
 
 0.1.0
