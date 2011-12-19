@@ -17,9 +17,9 @@ if they're not relevant for your test case::
 
     #tests.py
     from django_any import any_model
-    user = any_model(Book)
+    user = any_model(Poll)
 
-It will create a book instance with both fields filled with meaningless but valid data::
+It will create a poll instance with both fields filled with meaningless but valid data::
 
     'question': 'KStKMESUXDjnlDNcJLsAiLcZQGnVXhORIKxWYtPwiqgVXgFvgpmMajwbGFRkoCo'
     'pub_date': datetime.datetime(2002, 10, 1, 6, 1, 16)
@@ -43,7 +43,7 @@ Note, that ``pub_date`` will still be generated randomly for you.::
 Constraints
 ~~~~~~~~~~~
 
-django-any will preserve all field constraints, such as max_length,
+``django-whatever`` will preserve all field constraints, such as max_length,
 and choices when filling models with random data.
 It also tries to honor model custom validation by making model instances until
 ``full_clean()`` returns ``True``.
@@ -51,7 +51,7 @@ It also tries to honor model custom validation by making model instances until
 Relations
 ~~~~~~~~~
 
-django-any supports Django ORM-like `double-underscore` syntax
+``django-whatever`` supports Django ORM-like `double-underscore` syntax
 for setting values for related instances::
 
     #models.py
@@ -61,7 +61,7 @@ for setting values for related instances::
         votes = models.IntegerField()
 
     #tests.py
-    order = any_model(Order, poll__pub_date = datetime.now())
+    order = any_model(Choice, poll__pub_date = datetime.now())
 
 
 Fixtures

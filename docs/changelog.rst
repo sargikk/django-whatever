@@ -7,6 +7,7 @@ Changelog
 ~~~~~~~~
 
 * Fixed ``ImportError: cannot import name _strclass`` for python 2.7
+* Added ``any_model_with_defaults`` function to generate models with default values where acceptible
 * Fixed tests for django 1.4 compatibility
 * Added support for GenericIPAddressField in both model and forms (django 1.4 and above)
 * Multiple minor updates and bugfixes in docs

@@ -51,10 +51,10 @@ Example
 ~~~~~~~~
 ::
 
-        from django_any.test import Client
-        self.client = Client()
-        # log in as admin
-        self.client.login_as(is_superuser=True)
+    from django_any.test import Client
+    self.client = Client()
+    # log in as admin
+    self.client.login_as(is_superuser=True)
 
 
 .. _post_any_data:
@@ -65,3 +65,24 @@ Posts random froms data to ``url``. Additional data can be passed in dictionary 
 By default, it's assumed that forms are rendered by same url, their names and default values are taken
 from context and can be overriden by ``context_forms`` argument.
 
+
+Creating models with default values
+-----------------------------------
+
+Basic `any_model` provides totally random values that pass validation and meet requiremnts of creation,
+but sometimes it's useful to keep defaults. In those cases it's reccomended to use `any_model_with_defaults`::
+
+    from django_any.contrib import any_model_with_defaults
+
+    #models.py
+    class Poll(models.Model):
+        question = models.CharField(max_length=200)
+        pub_date = models.DateTimeField('date published', defalut=datetime.datetime(2000, 12, 10))
+
+    #tests.py
+    poll = any_model_with_defaults(Poll)
+
+Note, that ``question`` value is random, but ``pub_date`` is taken from ``default`` attribute::
+
+    'question': 'HJ:34KW<DGdfSgfL67KVRD:'
+    'pub_date': datetime.datetime(2000, 12, 10)
