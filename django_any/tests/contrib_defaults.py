@@ -16,7 +16,7 @@ class SimpleModelWithDefaults(models.Model):
     comma_separated_field = models.CommaSeparatedIntegerField(max_length=50, default='1,2,3')
     date_field = models.DateField(default=datetime.date(2010, 12, 10))
     datetime_field = models.DateTimeField(datetime.datetime.now)
-    decimal_field = models.DecimalField(decimal_places=2, max_digits=10, default=Decimal(0.5))
+    decimal_field = models.DecimalField(decimal_places=2, max_digits=10, default=Decimal('0.5'))
     email_field = models.EmailField(default='admin@dev.null')
     float_field = models.FloatField(default=0.7)
     integer_field = models.IntegerField(default=42)
@@ -41,7 +41,7 @@ class AnyModelWithDefaults(TestCase):
         comma_separated_field = '5,6,7',
         date_field = datetime.date(2012, 12, 10),
         datetime_field = datetime.datetime(1985, 12, 10),
-        decimal_field = Decimal(1.5),
+        decimal_field = Decimal('1.5'),
         email_field = 'root@dev.null',
         float_field = 1.5,
         integer_field = 777,
