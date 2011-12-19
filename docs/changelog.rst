@@ -3,8 +3,8 @@
 Changelog
 =========
 
-0.2.0dev
-~~~~~~~~
+0.2.0
+~~~~~
 
 * Fixed ``ImportError: cannot import name _strclass`` for python 2.7
 * Added ``any_model_with_defaults`` function to generate models with default values where acceptible
