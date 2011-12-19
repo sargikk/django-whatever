@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-whatever',
-    version='0.2.0dev',
+    version='0.2.0',
     description='Unobtrusive test models creation for django.',
     author='Ilya Baryshev',
     author_email='baryshev@gmail.com',
