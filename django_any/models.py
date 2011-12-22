@@ -412,7 +412,7 @@ def any_text_field(field, **kwargs):
     >>> result[0] == COMMON_P
     True
     """
-    return paragraphs(10)
+    return str(paragraphs(10))
 
 
 @any_field.register(models.URLField)
