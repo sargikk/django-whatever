@@ -45,6 +45,7 @@ class SimpleCreation(TestCase):
                 self.assertTrue(value is not None, "%s is uninitialized" % field.name)
             self.assertTrue(isinstance(field, original_field.__class__), "%s has correct field type" % field.name)
 
-    def _test_partial_specification(self):
+    def test_partial_specification(self):
         result = any_model(SimpleModel, char_field='test')
         self.assertEqual(result.char_field, 'test')
+

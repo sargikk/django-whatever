@@ -407,11 +407,10 @@ def any_text_field(field, **kwargs):
     """
     Return random 'lorem ipsum' Latin text
     >>> result = any_field(models.TextField())
-    >>> from django.contrib.webdesign.lorem_ipsum import COMMON_P
-    >>> result[0] == COMMON_P
-    True
+    >>> type(result)
+    <type 'str'>
     """
-    return str(paragraphs(10))
+    return str("\n".join(paragraphs(10)))
 
 
 @any_field.register(models.URLField)
