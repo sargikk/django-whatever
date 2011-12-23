@@ -6,7 +6,8 @@ Changelog
 0.2.1
 ~~~~~
 
-* Added xunit reference
+* Added xunit reference docs
+* Fixed ``any_text_field`` return value
 * Updated setup.py to use versiontools
 * Minor updates and bugfixes in docs and LICENCE
 
