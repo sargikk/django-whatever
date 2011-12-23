@@ -39,14 +39,16 @@ Contents
    forms
    contrib
    debugging
+   xunit
    changelog
 
 
 Development
 -----------
 
-You can grab latest code on `Github <https://github.com/coagulant/django-whatever>`_
-Feel free to submit `issues <https://github.com/coagulant/django-whatever/issues>`_ there and pull requests are also weclome.
+You can grab latest code on `Github <https://github.com/coagulant/django-whatever>`_.
+
+Feel free to submit `issues <https://github.com/coagulant/django-whatever/issues>`_, pull requests are also welcome.
 
 Authors & contributors
 ----------------------

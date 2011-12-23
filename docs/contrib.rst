@@ -70,7 +70,7 @@ Creating models with default values
 -----------------------------------
 
 Basic `any_model` provides totally random values that pass validation and meet requiremnts of creation,
-but sometimes it's useful to keep defaults. In those cases it's reccomended to use `any_model_with_defaults`::
+but sometimes it's useful to keep defaults. In those cases it's recommended to use `any_model_with_defaults`::
 
     from django_any.contrib import any_model_with_defaults
 

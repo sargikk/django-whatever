@@ -6,6 +6,7 @@ Changelog
 0.2.1
 ~~~~~
 
+* Added xunit reference
 * Updated setup.py and LICENCE
 
 0.2.0
