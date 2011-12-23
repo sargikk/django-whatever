@@ -25,8 +25,7 @@ except ImportError:
     validate_ipv46_address = None
 
 from django_any import xunit
-from django_any.functions import valid_choices, split_model_kwargs, \
-    ExtensionMethod
+from django_any.functions import valid_choices, split_model_kwargs, ExtensionMethod
 
 any_field = ExtensionMethod()
 any_model = ExtensionMethod(by_instance=True)
@@ -39,7 +38,7 @@ def any_field_blank(function):
     def wrapper(field, **kwargs):
         if kwargs.get('isnull', False):
             return None
-    
+
         if field.blank and random.random < 0.1:
             return None
         return function(field, **kwargs)
@@ -236,7 +235,7 @@ def any_file_field(field, **kwargs):
             result = get_some_file("%s/%s" % (path, subdir))
             if result:
                 return result
-            
+
     if callable(field.upload_to):
         generated_filepath = field.upload_to(None, xunit.any_string(ascii_letters, 10, 20))
         upload_to = os.path.dirname(generated_filepath)
@@ -267,7 +266,7 @@ def any_filepath_field(field, **kwargs):
 
         if files:
             return random.choice(files)
-        
+
         if field.recursive:
             for subdir in subdirs:
                 result = get_some_file(subdir)

@@ -7,7 +7,8 @@ Changelog
 ~~~~~
 
 * Added xunit reference
-* Updated setup.py and LICENCE
+* Updated setup.py to use versiontools
+* Minor updates and bugfixes in docs and LICENCE
 
 0.2.0
 ~~~~~

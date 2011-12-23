@@ -1,5 +1,5 @@
 Xunit reference
 ===============
 
-.. automodule:: xunit
+.. automodule:: django_any.xunit
     :members:

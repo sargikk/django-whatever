@@ -6,7 +6,7 @@ read = lambda filepath: codecs.open(filepath, 'r', 'utf-8').read()
 
 setup(
     name='django-whatever',
-    version='0.2.1dev',
+    version = ":versiontools:your_package:",
     description='Unobtrusive test models creation for django.',
     long_description=read(path.join(path.dirname(__file__), 'README.rst')),
     author='Ilya Baryshev',
@@ -16,6 +16,9 @@ setup(
     include_package_data=True,
     test_suite = "tests.manage",
     zip_safe=False,
+    setup_requires = [
+        'versiontools >= 1.8',
+    ],
     license='MIT License',
     platforms = ['any'],
     classifiers=[
