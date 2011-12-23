@@ -1,9 +1,14 @@
+from os import path
+import codecs
 from setuptools import setup
+
+read = lambda filepath: codecs.open(filepath, 'r', 'utf-8').read()
 
 setup(
     name='django-whatever',
-    version='0.2.0',
+    version='0.2.1dev',
     description='Unobtrusive test models creation for django.',
+    long_description=read(path.join(path.dirname(__file__), 'README.rst')),
     author='Ilya Baryshev',
     author_email='baryshev@gmail.com',
     url='http://github.com/coagulant/django-whatever',

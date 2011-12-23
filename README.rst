@@ -1,7 +1,7 @@
 Unobtrusive test models creation for django
 ===========================================
 
-django-whatever is a friendly fork of ``django-any`` package originally by Mikhail Podgurskiy (kmmbvnr)
+django-whatever is a friendly fork of ``django-any`` package written by Mikhail Podgurskiy (kmmbvnr)
 The purpose of the fork is to fix most annoying bugs and add `some features <http://django-whatever.readthedocs.org/en/latest/changelog.html>`_
 To remain compatible with original package ``django-whatever`` retains same namespace: ``django_any``.
 

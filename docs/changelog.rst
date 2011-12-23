@@ -3,6 +3,11 @@
 Changelog
 =========
 
+0.2.1
+~~~~~
+
+* Updated setup.py and LICENCE
+
 0.2.0
 ~~~~~
 

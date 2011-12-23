@@ -1,7 +1,7 @@
 django-whatever
 ===============
 
-.. note::  django-whatever is a friendly fork of ``django-any`` package originally by Mikhail Podgurskiy (kmmbvnr)
+.. note::  django-whatever is a friendly fork of ``django-any`` package written by Mikhail Podgurskiy (kmmbvnr)
            The purpose of the fork is to fix most annoying bugs and add :ref:`some features <changelog>`.
            To remain compatible with original package ``django-whatever`` retains same namespace: ``django_any``.
 
