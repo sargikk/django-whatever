@@ -477,10 +477,18 @@ def _fill_model_fields(model, **kwargs):
     for field in model._meta.virtual_fields:
         if field.name in model_fields:
             object = kwargs[field.name]
-            model_fields[field.ct_field] = kwargs[field.ct_field]= ContentType.objects.get_for_model(object)
-            model_fields[field.fk_field] = kwargs[field.fk_field]= object.id
+            model_fields[field.ct_field] = kwargs[field.ct_field] = ContentType.objects.get_for_model(object)
+            model_fields[field.fk_field] = kwargs[field.fk_field] = object.id
+    # django-mptt support
+    exclude_names = []
+    if hasattr(model, '_mptt_meta'):
+        mptt_attrs = ['left_attr', 'right_attr', 'tree_id_attr', 'level_attr', 'parent_attr']
+        mptt_names = [getattr(model._mptt_meta, attr) for attr in mptt_attrs]
+        exclude_names = [item for item in mptt_names if item not in model_fields.keys()]
     # fill local fields
     for field in model._meta.fields:
+        if field.name in exclude_names:
+            continue
         if field.name in model_fields:
             if isinstance(kwargs[field.name], Q):
                 """

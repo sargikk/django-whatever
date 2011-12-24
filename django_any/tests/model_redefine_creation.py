@@ -33,7 +33,6 @@ class RedefinedCreation(TestCase):
         result = any_model(Redefined, name="test2")
         self.assertEqual(result.name, 'test2')
 
-    # TODO Fix model factory registration
-    def _test_create_related_redefied(self):
+    def test_create_related_redefied(self):
         result = any_model(RelatedToRedefined)
         self.assertEqual(result.related.name, 'test')

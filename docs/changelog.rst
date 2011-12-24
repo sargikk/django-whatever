@@ -3,6 +3,12 @@
 Changelog
 =========
 
+0.3.0 (development)
+~~~~~~~~~~~~~~~~~~~
+
+* add support for django-mptt
+
+
 0.2.1
 ~~~~~
 
