@@ -48,6 +48,7 @@ and choices when filling models with random data.
 It also tries to honor model custom validation by making model instances until
 ``full_clean()`` returns ``True``.
 
+
 Relations
 ~~~~~~~~~
 
@@ -75,11 +76,44 @@ to select values for fields from db::
 It will create an order for existing customer, whose country is US.
 
 
+Supported fields
+================
+
+Here is a complete list of django model fields that are suppported by ``any_model`` out of the box.
+Custom field types are supported via :ref:`registering your own hadlers <custom_model_fields>`::
+
+* BigIntegerField
+* CharField
+* BooleanField
+* CommaSeparatedIntegerField
+* DateField
+* DateTimeField
+* DecimalField
+* EmailField
+* FloatField
+* IntegerField
+* IPAddressField
+* NullBooleanField
+* PositiveIntegerField
+* PositiveSmallIntegerField
+* SlugField
+* TextField
+* TimeField
+* URLField
+* FileField
+* ImageField
+
+
+Special cases:
+* ForeignKey
+* GenericForeignKey
+
+.. _custom_model_fields:
 Custom model fields
 ~~~~~~~~~~~~~~~~~~~
 
 It's quite common to create custom model fields to store data. To let ``django-whatever`` know how to
-generate random data for this filed you should register it explicitly::
+generate random data for this field you should register it explicitly::
 
     @any_field.register(model_utils.field.AutoCreatedField)
     def any_auto_created_field(field, **kwargs):
