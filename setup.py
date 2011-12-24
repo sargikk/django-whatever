@@ -1,12 +1,14 @@
 from os import path
 import codecs
+import os
 from setuptools import setup
+os.environ['DJANGO_SETTINGS_MODULE'] = "tests.settings"
 
 read = lambda filepath: codecs.open(filepath, 'r', 'utf-8').read()
 
 setup(
     name='django-whatever',
-    version = ":versiontools:your_package:",
+    version = ":versiontools:django_any:",
     description='Unobtrusive test models creation for django.',
     long_description=read(path.join(path.dirname(__file__), 'README.rst')),
     author='Ilya Baryshev',

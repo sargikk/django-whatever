@@ -7,4 +7,4 @@ coverage.xml
 nosetests.xml
 pylint.out
 distribute-*.tar.gz
-docs/_*/
+docs/.*/
