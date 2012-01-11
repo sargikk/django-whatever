@@ -3,6 +3,12 @@
 Changelog
 =========
 
+0.2.2
+~~~~~
+
+* Fixed pip installation
+* Added ability to login_as arbitrary user
+
 0.2.1
 ~~~~~
 

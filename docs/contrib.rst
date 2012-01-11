@@ -35,14 +35,15 @@ Creating users
 Custom test client
 ------------------
 
-.. currentmodule:: django_any.contrib
+.. currentmodule:: django_any.test
 
-Django any has custom test clent, that extends default django client.
-It provides two useful methods for authorisation and posting forms.
+Django-whatever has custom test clent, that extends default django client.
+It provides two useful methods for authorization and forms posting.
 
 .. function:: login_as(self, **kwargs):
 
     Log into site as random user. Key-valued arguments are the same as for ``any_user`` function.
+    To log in as specific user, provide argument ``user`` (note, that user password will be reset).
 
     .. code-block:: django
 
@@ -50,6 +51,10 @@ It provides two useful methods for authorisation and posting forms.
         self.client = Client()
         # log in as admin
         self.client.login_as(is_superuser=True)
+
+        # log in as specific user
+        user = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
+        self.client.login_as(user=user)
 
 
 .. _post_any_data:

@@ -40,7 +40,15 @@ def _request_context_forms(context):
 class Client(DjangoClient):
     def login_as(self, **kwargs):
         password = xunit.any_string()
-        user = any_user(password=password, **kwargs)
+        if 'user' in kwargs:
+            user = kwargs['user']
+            try:
+                user.set_password(password)
+                user.save()
+            except Exception:
+                raise AssertionError('Bad user object')
+        else:
+            user = any_user(password=password, **kwargs)
 
         if self.login(username=user.username, password=password):
             return user
