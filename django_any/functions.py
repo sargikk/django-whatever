@@ -86,6 +86,11 @@ class ExtensionMethod(object):
         function = self.registry.get(field_type, self.default)
 
         if function is None:
+            for parent in field_type.__mro__[1:]:
+                
+                # Try to find a match in the parents.
+                if parent in self.registry:
+                    return self.registry[parent](*args, **kwargs)
             raise TypeError("no match %s" % field_type)
 
         return function(*args, **kwargs)
