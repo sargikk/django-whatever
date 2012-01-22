@@ -85,3 +85,7 @@ generate random data for this filed you should register it explicitly::
     def any_auto_created_field(field, **kwargs):
         return datetime.datetime.now()
 
+.. note::  When project defines a lot of custom fields, it can be a hassle to
+           register all of them manually. Quite often the registered sample data for the field the custom field
+           was inherited from will work just as well, so django-whatever tries to use parent generator
+           if no function is registered for a custom field.

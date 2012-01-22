@@ -3,6 +3,11 @@
 Changelog
 =========
 
+0.2.3
+~~~~~
+
+* Values for custom fields are created with their parent generator if the field is not registered (#22)
+
 0.2.2
 ~~~~~
 
