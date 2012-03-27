@@ -10,6 +10,7 @@ from datetime import date, datetime, time
 from string import ascii_letters, digits, hexdigits
 from random import choice
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core import validators
 from django.db import models, IntegrityError
@@ -162,8 +163,17 @@ def any_datetime_field(field, **kwargs):
     >>> type(result)
     <type 'datetime.datetime'>
     """
+    USE_TZ = getattr(settings, 'USE_TZ', False)
     from_date = kwargs.get('from_date', datetime(1990, 1, 1))
-    to_date = kwargs.get('to_date', datetime.today())
+    
+    if USE_TZ:
+        from django.utils.timezone import now, get_current_timezone, make_aware
+        
+        from_date = make_aware(from_date, get_current_timezone())
+        to_date = kwargs.get('to_date', now())
+    else:    
+        to_date = kwargs.get('to_date', datetime.today())
+        
     return xunit.any_datetime(from_date=from_date, to_date=to_date)
 
 
