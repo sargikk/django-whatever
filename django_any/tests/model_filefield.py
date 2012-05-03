@@ -7,7 +7,7 @@ from django.db import models
 from django.test import TestCase
 from django_any import any_model
 
-class ModelWithFileFieldUploadToString(models.Model):
+class ModelUploadToString(models.Model):
     file_field = models.FileField(upload_to='sample_subdir')
 
     class Meta:
@@ -18,7 +18,7 @@ def callable_upload_to(instance, filename):
     return os.path.join('sample_subdir', filename)
 
 
-class ModelWithFileFieldUploadToCallable(models.Model):
+class ModelUploadToCallable(models.Model):
     file_field = models.FileField(upload_to=callable_upload_to)
 
     class Meta:
@@ -28,10 +28,10 @@ class ModelWithFileFieldUploadToCallable(models.Model):
 class FileFiledUploadTo(TestCase):
 
     def test_created_model_with_filefield_string_upload_to(self):
-        model = any_model(ModelWithFileFieldUploadToString)
+        model = any_model(ModelUploadToString)
         self.assertEqual(model.file_field, 'sample_file.txt')
 
     def test_created_model_with_filefield_callable_upload_to(self):
-        model = any_model(ModelWithFileFieldUploadToCallable)
+        model = any_model(ModelUploadToCallable)
         self.assertEqual(model.file_field, 'sample_file.txt')
 
