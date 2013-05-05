@@ -24,7 +24,7 @@ class SimpleModel(models.Model):
     slug_field = models.SlugField()
     text_field = models.TextField()
     time_field = models.TimeField()
-    url_field = models.URLField(verify_exists=False)
+    url_field = models.URLField()
     file_field = models.FileField(upload_to='sample_subdir')
     image_field = models.ImageField(upload_to='sample_subdir')
 
