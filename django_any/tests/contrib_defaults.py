@@ -27,7 +27,7 @@ class SimpleModelWithDefaults(models.Model):
     slug_field = models.SlugField(default='any_model_default')
     text_field = models.TextField(default='Lorem ipsum')
     time_field = models.TimeField(default=datetime.time(hour=11, minute=14))
-    url_field = models.URLField(verify_exists=False, default='http://yandex.ru')
+    url_field = models.URLField(default='http://yandex.ru')
 
     class Meta:
         app_label = 'django_any'

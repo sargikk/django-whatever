@@ -437,7 +437,7 @@ def any_url_field(field, **kwargs):
     if not url:
         verified = [validator for validator in field.validators \
                     if isinstance(validator, validators.URLValidator) and \
-                    validator.verify_exists == True]
+                    getattr(validator, 'verify_exists', False) == True]
         if verified:
             url = choice(['http://news.yandex.ru/society.html',
                           'http://video.google.com/?hl=en&tab=wv',
