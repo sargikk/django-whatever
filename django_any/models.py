@@ -251,7 +251,7 @@ def any_file_field(field, **kwargs):
         upload_to = os.path.dirname(generated_filepath)
     else:
         upload_to = field.upload_to
-    folder = os.path.join(field.storage.base_location, upload_to)
+    folder = os.path.join(field.storage.base_location, upload_to, '/')
     if not os.path.exists(folder):
         os.makedirs(folder)
     result = get_some_file(upload_to)
