@@ -238,13 +238,12 @@ def any_file_field(field, **kwargs):
 
         if files:
             result_file = random.choice(files)
-            instance = field.storage.open("%s/%s" % (path, result_file)).file
-            return FieldFile(instance, field, result_file)
-
-        for subdir in subdirs:
-            result = get_some_file("%s/%s" % (path, subdir))
-            if result:
-                return result
+        else:
+            tmp_file = open("tmp.txt", "w")
+            tmp_file.close()
+            result_file = "tmp.txt"
+        instance = field.storage.open("%s/%s" % (path, result_file)).file
+        return FieldFile(instance, field, result_file)
 
     if callable(field.upload_to):
         generated_filepath = field.upload_to(None, xunit.any_string(ascii_letters, 10, 20))
