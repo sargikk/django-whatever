@@ -243,7 +243,7 @@ def any_file_field(field, **kwargs):
             tmp_file.close()
             result_file = "tmp.txt"
         result_file = "{}/{}".format(path, result_file)
-        instance = field.storage.open(result_file).file
+        instance = kwargs.get("instance", None)
         return FieldFile(instance, field, result_file)
 
     if callable(field.upload_to):
@@ -518,7 +518,7 @@ def _fill_model_fields(model, **kwargs):
             skip self relations
             """
         else:
-            setattr(model, field.name, any_field(field, **fields_args[field.name]))
+            setattr(model, field.name, any_field(field, instance=model, **fields_args[field.name]))
 
     # procceed reversed relations
     onetoone = [(relation.var_name, relation.field) \
